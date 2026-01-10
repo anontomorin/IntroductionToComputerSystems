@@ -184,6 +184,37 @@ body {
     color: #27ae60;
 }
 
+/* 新增：图片样式 */
+.question-image {
+    margin: 15px 0;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    text-align: center;
+}
+
+.question-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.image-text {
+    font-family: monospace;
+    white-space: pre-wrap;
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: left;
+}
+
+.image-fallback {
+    color: #e74c3c;
+    font-style: italic;
+    padding: 10px;
+}
+
 /* 新增样式：章节选择 */
 .chapter-selection {
     background-color: white;
@@ -272,5 +303,322 @@ body {
     }
     .result-buttons .btn {
         width: 100%;
+    }
+    
+    /* 移动端图片调整 */
+    .question-image {
+        padding: 10px;
+    }
+    .image-text {
+        font-size: 13px;
+    }
+}
+.question-image {
+    margin: 15px 0;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    text-align: center;
+}
+
+.question-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* 图片替代文本样式 */
+.image-fallback {
+    color: #e74c3c;
+    font-style: italic;
+    padding: 10px;
+    text-align: center;
+}
+
+/* 文本图片样式（用于显示表格等） */
+.image-text {
+    font-family: 'Courier New', monospace;
+    white-space: pre-wrap;
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: left;
+    overflow-x: auto;
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+/* 移动端调整 */
+@media (max-width: 480px) {
+    .question-image {
+        padding: 10px;
+        margin: 10px 0;
+    }
+    
+    .image-text {
+        font-size: 13px;
+        padding: 8px;
+    }
+}
+.single-chapter-switch {
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.switch-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.switch-label input[type="checkbox"] {
+    display: none;
+}
+
+.switch-slider {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+    background-color: #ccc;
+    border-radius: 34px;
+    margin-right: 12px;
+    transition: background-color 0.3s;
+}
+
+.switch-slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.switch-label input:checked + .switch-slider {
+    background-color: #3498db;
+}
+
+.switch-label input:checked + .switch-slider:before {
+    transform: translateX(26px);
+}
+
+.switch-text {
+    font-weight: 500;
+}
+
+.mode-hint {
+    font-size: 14px;
+    color: #666;
+    padding: 5px 0;
+    font-style: italic;
+}
+
+/* 结果页面选项卡样式 */
+.result-tabs {
+    display: flex;
+    background-color: white;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+    margin-bottom: 0;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+}
+
+.result-tab {
+    flex: 1;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border: none;
+    border-bottom: 3px solid transparent;
+    font-size: 16px;
+    font-weight: 500;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.result-tab:hover {
+    background-color: #e9ecef;
+}
+
+.result-tab.active {
+    background-color: white;
+    color: #3498db;
+    border-bottom-color: #3498db;
+}
+
+.tab-content {
+    display: none;
+    background-color: white;
+    border-radius: 0 0 15px 15px;
+    padding: 20px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    max-height: 400px;
+    overflow-y: auto;
+    margin-bottom: 30px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.question-list {
+    max-height: 350px;
+    overflow-y: auto;
+}
+
+/* 正确题目标签 */
+.correct-tag {
+    display: inline-block;
+    background-color: #2ecc71;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 12px;
+    margin-right: 8px;
+}
+
+/* 错题标签 */
+.wrong-tag {
+    display: inline-block;
+    background-color: #e74c3c;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 12px;
+    margin-right: 8px;
+}
+
+/* 未答题标签 */
+.unanswered-tag {
+    display: inline-block;
+    background-color: #95a5a6;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 12px;
+    margin-right: 8px;
+}
+
+/* 答题状态图标 */
+.status-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+}
+
+.status-correct {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.status-wrong {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.status-unanswered {
+    background-color: #95a5a6;
+    color: white;
+}
+
+/* 题目概要信息 */
+.question-summary {
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+    background-color: #f8f9fa;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.question-summary:hover {
+    background-color: #e9ecef;
+    transform: translateX(5px);
+}
+
+.question-summary.correct {
+    border-left-color: #2ecc71;
+}
+
+.question-summary.wrong {
+    border-left-color: #e74c3c;
+}
+
+.question-summary.unanswered {
+    border-left-color: #95a5a6;
+}
+
+.question-summary-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.question-summary-title {
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 15px;
+}
+
+.question-summary-chapter {
+    font-size: 12px;
+    color: #666;
+    background-color: #e3f2fd;
+    padding: 2px 8px;
+    border-radius: 10px;
+}
+
+/* 移动端调整 */
+@media (max-width: 480px) {
+    .switch-slider {
+        width: 40px;
+        height: 20px;
+    }
+    
+    .switch-slider:before {
+        height: 14px;
+        width: 14px;
+        left: 3px;
+        bottom: 3px;
+    }
+    
+    .switch-label input:checked + .switch-slider:before {
+        transform: translateX(20px);
+    }
+    
+    .result-tab {
+        padding: 12px 8px;
+        font-size: 14px;
+    }
+    
+    .question-summary {
+        padding: 10px;
+    }
+    
+    .question-summary-title {
+        font-size: 14px;
     }
 }
