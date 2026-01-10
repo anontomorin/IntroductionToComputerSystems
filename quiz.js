@@ -179,8 +179,7 @@ function renderCurrentQuestion() {
         imageContainer.className = "question-image";
         
         // 根据图片类型创建不同内容
-        if (question.image.startsWith("img/")) {
-            // 图片文件路径
+       
             const img = document.createElement("img");
             img.src = question.image;
             img.alt = "题目图片";
@@ -193,13 +192,7 @@ function renderCurrentQuestion() {
                 imageContainer.appendChild(fallbackText);
             };
             imageContainer.appendChild(img);
-        } else {
-            // 如果是文本内容（如表格）
-            const textContainer = document.createElement("div");
-            textContainer.className = "image-text";
-            textContainer.textContent = question.image;
-            imageContainer.appendChild(textContainer);
-        }
+        
         
         // 将图片插入到问题文本后面
         questionContent.parentNode.insertBefore(imageContainer, questionContent.nextSibling);
