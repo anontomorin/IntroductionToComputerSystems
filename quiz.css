@@ -622,3 +622,102 @@ body {
         font-size: 14px;
     }
 }
+/* 答案反馈样式 */
+.answer-feedback {
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.answer-feedback.correct {
+    background-color: rgba(46, 204, 113, 0.1);
+    border: 2px solid #2ecc71;
+}
+
+.answer-feedback.wrong {
+    background-color: rgba(231, 76, 60, 0.1);
+    border: 2px solid #e74c3c;
+}
+
+.feedback-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.feedback-icon {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.answer-feedback.correct .feedback-icon {
+    color: #2ecc71;
+}
+
+.answer-feedback.wrong .feedback-icon {
+    color: #e74c3c;
+}
+
+.feedback-text {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.correct-answer-text {
+    font-size: 16px;
+    color: #2c3e50;
+    margin: 5px 0;
+}
+
+.auto-jump {
+    font-size: 14px;
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+.continue-btn {
+    padding: 10px 25px;
+    font-size: 16px;
+    background-color: #3498db;
+    margin-top: 10px;
+}
+
+.continue-btn:hover {
+    background-color: #2980b9;
+}
+
+/* 答案样式 */
+.correct-answer {
+    background-color: #d4edda !important;
+    border-color: #c3e6cb !important;
+    color: #155724;
+}
+
+.wrong-answer {
+    background-color: #f8d7da !important;
+    border-color: #f5c6cb !important;
+    color: #721c24;
+}
+
+/* 已锁定的选项 */
+.option.disabled {
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+/* 移动端调整 */
+@media (max-width: 480px) {
+    .answer-feedback {
+        padding: 12px;
+    }
+    
+    .feedback-icon {
+        font-size: 28px;
+    }
+    
+    .feedback-text {
+        font-size: 16px;
+    }
+}
