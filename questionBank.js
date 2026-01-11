@@ -306,8 +306,8 @@ const questionBank = [
         options: [
             "A. 2ⁿ⁺¹",
             "B. 2ⁿ",
-            "C. 2ⁿ⁺¹",
-            "D. 2ⁿ⁻¹"
+            "C. 2ⁿ+1",
+            "D. 2ⁿ-1"
         ],
         answer: "A"
     },
@@ -2782,6 +2782,7 @@ const questionBank = [
         answer: "B"
     }
 ];
+
 
 
 
