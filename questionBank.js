@@ -247,7 +247,7 @@ const questionBank = [
     },
     {
         chapter: "第二章 数据的机器级表示与处理",
-        question: "以下选项中，正确答案为 ()。",
+        question: "108对应的十六进制形式为()。",
         options: [
             "A. 6CH",
             "B. B4H",
@@ -3419,6 +3419,7 @@ const questionBank = [
         answer: "B"
     }
 ];
+
 
 
 
