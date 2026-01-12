@@ -2111,7 +2111,7 @@ const questionBank = [
     // 第五章 程序的执行（18题）
     {
         chapter: "第五章 程序的执行",
-        question: "计算机中的核心时序信号是 ()。",
+        question: "机器主频的倒数（一个节拍）等于 ()。",
         options: [
             "A. CPU 时钟周期",
             "B. 主板时钟周期",
@@ -2782,6 +2782,7 @@ const questionBank = [
         answer: "B"
     }
 ];
+
 
 
 
